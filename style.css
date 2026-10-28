@@ -685,6 +685,66 @@ section[id] {
     margin-bottom: 18px;
 }
 
+.skill-tags {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.skill-tags span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 10px;
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    background: linear-gradient(135deg, #f0fbf8, #e3f6f1);
+    color: #087f75;
+    border: 1px solid #d2eee6;
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.skill-tags span:hover {
+    background: #008f83;
+    color: #ffffff;
+    border-color: #008f83;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 143, 131, 0.15);
+}
+
+/* Tablets and mobile phones */
+@media (max-width: 600px) {
+    .skill-tags {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .skill-tags span {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+    .skill-tags {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* =====================================
    9. Airline Systems
 ===================================== */
